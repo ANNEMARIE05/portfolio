@@ -661,7 +661,7 @@ export default function Portfolio(){
         </div>
       </footer>
       <div class="fixed bottom-6 right-6 z-40">
-        <a href="https://wa.me/+2250172317983" className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl hover:bg-green-400 transition-all transform hover:scale-110 animate-bounce">
+        <a href="https://wa.me/+2250172317983" target='_blank' className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl hover:bg-green-400 transition-all transform hover:scale-110 animate-bounce">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
