@@ -128,7 +128,7 @@ export default function Portfolio(){
 
   const parc = [
     {
-      annee: '2024-2025',
+      annee: '2025',
       titre: 'Formation Fullstack',
       inst: 'WeCode',
       type: 'certifications',
