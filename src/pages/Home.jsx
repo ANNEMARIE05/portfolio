@@ -306,10 +306,10 @@ export default function Portfolio(){
         </div>
 
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-            <div className="w-6 h-10 rounded-full border-2 border-violet-400 flex justify-center relative overflow-hidden">
-              <div className="w-1 h-3 bg-violet-400 rounded-full absolute top-2 animate-scroll-indicator"></div>
-            </div>
+          <div className="w-6 h-10 rounded-full border-2 border-violet-600 flex justify-center relative overflow-hidden">
+            <div className="w-1 h-3 bg-violet-600 rounded-full absolute top-2 animate-scroll-indicator"></div>
           </div>
+        </div>
       </section>
 
       <section id="apropos" className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 relative">
@@ -319,7 +319,7 @@ export default function Portfolio(){
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
-            <div className={`transition-all duration-1000 ${animVis['apropos'] ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'} `}>
+            <div className={`transition-all duration-1000 ${animVis['apropos'] ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
               <div className="relative flex justify-center">
                 <div className="relative rounded-full w-64 h-64 p-2 bg-gradient-to-br from-pink-500 to-purple-600 animate-pulse">
                   <img
@@ -481,25 +481,28 @@ export default function Portfolio(){
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                nom: 'E-Commerce Platform',
-                desc: 'Plateforme e-commerce moderne avec React et Node.js',
-                techs: ['React', 'Node.js', 'MongoDB'],
-                couleur: 'from-blue-500 to-purple-600',
-                icone: '🛒'
+                nom: 'Flash service',
+                desc: 'Plateforme de paiement 1xbet/melbet',
+                techs: ['Html/Css', 'TailwindCss', 'Javascript'],
+                img: 'https://img.freepik.com/vecteurs-premium/mains-tenant-smartphone-pour-transferer-argent-ligne_185038-22.jpg?uid=R99967860&semt=ais_hybrid&w=740',
+                github:'https://github.com/ANNEMARIE05/flash-service',
+                voirPlus:'https://flash-service.vercel.app/',
               },
               {
-                nom: 'Task Management App',
-                desc: 'Application de gestion de tâches avec Vue.js',
-                techs: ['Vue.js', 'PHP', 'MySQL'],
-                couleur: 'from-green-500 to-teal-600',
-                icone: '📋'
+                nom: 'The N\'takou ',
+                desc: 'Application de visibilité d\'une ONG mettant des livres européens a la disposition des africains',
+                techs: ['Wordpress','Figma'],
+                img: 'https://img.freepik.com/vecteurs-libre/pile-livres-design-plat-dessines-main_23-2149322351.jpg?uid=R99967860&semt=ais_hybrid&w=740',
+                github:'#',
+                voirPlus:'https://thentakou.com/',
               },
               {
-                nom: 'Portfolio Website',
-                desc: 'Site portfolio responsive avec animations',
-                techs: ['HTML', 'CSS', 'JavaScript'],
-                couleur: 'from-pink-500 to-rose-600',
-                icone: '🎨'
+                nom: 'Maison d\'Hôte',
+                desc: 'Application de reservation de chambre d\'hôte',
+                techs: ['Next js', 'tailwindCss'],
+                img: 'https://img.freepik.com/vecteurs-libre/chambre-garcons-lit-armoire-etagere-chaise-boite-jouets-nuit_107791-10350.jpg?uid=R99967860&semt=ais_hybrid&w=740',
+                github:'https://github.com/ANNEMARIE05/chambre',
+                voirPlus:'https://chambre-alpha.vercel.app/',
               }
             ].map((projet, index) => (
               <div 
@@ -509,9 +512,8 @@ export default function Portfolio(){
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <div className={`h-32 sm:h-40 lg:h-48 bg-gradient-to-br ${projet.couleur} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="text-4xl sm:text-5xl lg:text-6xl animate-bounce">{projet.icone}</div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <div className={`h-32 sm:h-40 lg:h-48 bg-gradient-to-br flex items-center justify-center relative overflow-hidden`}>
+                  <img src={projet.img} className='h-full w-full object-cover' alt="" />
                 </div>
                 
                 <div className="p-4 sm:p-6">
@@ -535,14 +537,20 @@ export default function Portfolio(){
                   </div>
                   
                   <div className="flex gap-3 sm:gap-4">
-                    <button className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <a href={projet.voirPlus}
+                      target='_blank'
+                      className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                      >
                       <ExternalLink className="w-4 h-4" />
                       {txt[lang].projets.voirPlus}
-                    </button>
-                    <button className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 border border-white/20 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:bg-white/10 hover:scale-105">
+                    </a>
+                    <a href={projet.github}
+                      className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 border border-white/20 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:bg-white/10 hover:scale-105"
+                      target='_blank'
+                      >
                       <Github className="w-4 h-4" />
                       {txt[lang].projets.github}
-                    </button>
+                      </a>
                   </div>
                 </div>
               </div>
