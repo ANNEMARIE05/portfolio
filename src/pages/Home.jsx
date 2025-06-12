@@ -472,7 +472,7 @@ export default function Portfolio(){
           </h2>
           
           <div className="relative flex items-center justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 max-w-4xl">
+            <div className="grid grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 max-w-4xl">
               {comps.map((comp, index) => (
                 <div
                   key={comp.nom}
