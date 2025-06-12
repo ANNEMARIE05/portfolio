@@ -168,7 +168,7 @@ export default function Portfolio(){
     },
     {
       nom: 'The N\'takou ',
-      desc: 'Application de visibilité d\'une ONG mettant des livres européens a la disposition des africains',
+      desc: 'Application de Visibilité d\'une ONG mettant en à disposition des livres européens pour les Africains',
       techs: ['Wordpress','Figma'],
       img: 'https://img.freepik.com/vecteurs-libre/pile-livres-design-plat-dessines-main_23-2149322351.jpg?uid=R99967860&semt=ais_hybrid&w=740',
       github:'#',
@@ -176,7 +176,7 @@ export default function Portfolio(){
     },
     {
       nom: 'Maison d\'Hôte',
-      desc: 'Application de reservation de chambre d\'hôte',
+      desc: 'Application de Réservation de Chambres d\'hôte pour le confort de vôtre bien-être',
       techs: ['Next js', 'tailwindCss'],
       img: 'https://img.freepik.com/vecteurs-libre/chambre-garcons-lit-armoire-etagere-chaise-boite-jouets-nuit_107791-10350.jpg?uid=R99967860&semt=ais_hybrid&w=740',
       github:'https://github.com/ANNEMARIE05/chambre',
@@ -676,7 +676,7 @@ export default function Portfolio(){
               { icon: Mail, label: 'Email', value: 'annemarieagbonou@gmail.com', link: 'mailto:annemarieagbonou@gmail.com', color: 'pink' },
               { icon: Phone, label: 'Téléphone', value: '+225 01 72 31 79 83', link: 'tel:+22501723179883', color: 'violet' },
               { icon: Github, label: 'GitHub', value: '@ANNEMARIE05', link: 'https://github.com/ANNEMARIE05', color: 'pink' },
-              { icon: MapPin, label: 'Localisation', value: 'Koumassi, CI', link: '#', color: 'violet' }
+              { icon: MapPin, label: 'Localisation', value: 'Abidjan, Côte d\'Ivoire', link: '#', color: 'violet' }
             ].map((item, index) => (
               <a
                 key={index}
