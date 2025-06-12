@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Github, Mail, Phone, MapPin, Calendar, Download, ExternalLink, Code, Palette, Database, Globe, Star, Award, GraduationCap, Briefcase } from 'lucide-react';
+import logo from '../assets/logo.jpeg'
 
 export default function Portfolio(){
   const [lang, setLang] = useState('fr');
@@ -304,9 +305,11 @@ export default function Portfolio(){
           </div>
         </div>
 
-        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-pink-400" />
-        </div>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+            <div className="w-6 h-10 rounded-full border-2 border-violet-400 flex justify-center relative overflow-hidden">
+              <div className="w-1 h-3 bg-violet-400 rounded-full absolute top-2 animate-scroll-indicator"></div>
+            </div>
+          </div>
       </section>
 
       <section id="apropos" className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 relative">
@@ -316,12 +319,14 @@ export default function Portfolio(){
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
-            <div className={`transition-all duration-1000 ${animVis['apropos'] ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+            <div className={`transition-all duration-1000 ${animVis['apropos'] ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'} `}>
               <div className="relative flex justify-center">
-                <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 bg-gradient-to-br from-pink-400 to-violet-600 rounded-full p-1 shadow-2xl shadow-pink-500/30 animate-pulse">
-                  <div className="w-full h-full bg-slate-800 rounded-full flex items-center justify-center">
-                    <div className="text-4xl sm:text-6xl lg:text-8xl animate-bounce">👩‍💻</div>
-                  </div>
+                <div className="relative rounded-full w-64 h-64 p-2 bg-gradient-to-br from-pink-500 to-purple-600 animate-pulse">
+                  <img
+                    src={logo}
+                    alt="Professional headshot"
+                    className="rounded-full w-full h-full object-cover border-4 border-gray-800 z-10"
+                  />
                 </div>
                 <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-pink-500 rounded-full flex items-center justify-center animate-pulse shadow-2xl shadow-pink-500/50">
                   <Code className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 animate-spin" />
