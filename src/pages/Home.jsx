@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Github, Mail, Phone, MapPin, Calendar, Download, ExternalLink, Code, Palette, Database, Globe, Star, Award, GraduationCap, Briefcase, ArrowRight, Eye } from 'lucide-react';
-
+import logo from '../assets/logo.jpeg'
 export default function Portfolio(){
   const [lng, setLng] = useState('fr');
   const [sectActif, setSectActif] = useState('accueil');
@@ -420,9 +420,7 @@ export default function Portfolio(){
             <div className={`transition-all duration-1000 ${animVis['apropos'] ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
               <div className="relative flex justify-center group">
                 <div className="relative rounded-full w-64 h-64 p-2 bg-gradient-to-br from-pink-500 to-purple-600 transition-all duration-500 group-hover:scale-105">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-6xl font-bold text-white">
-                    AM
-                  </div>
+                  <img src={logo} className='w-full h-full rounded-full object-cover' alt="" />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-500/50 to-purple-600/50 animate-pulse" />
                 </div>
                 
