@@ -261,7 +261,7 @@ export default function Portfolio(){
 
   const telCv = () => {
     const lien = document.createElement('a');
-    lien.href = 'https://drive.google.com/uc?export=download&id=19K-y48bQbb7Z2DbHkvQtpdjIQwowxx94';
+    lien.href = 'https://drive.google.com/file/d/1zP27cpKSezYdD9rXzYk2ReyA1_T-_hTq/view?usp=sharing';
     lien.download = 'CV_Anne_Marie_Agbonou.pdf';
     lien.click();
   };
