@@ -132,28 +132,32 @@ export default function Portfolio(){
       titre: 'Formation Fullstack',
       inst: 'WeCode',
       type: 'certifications',
-      desc: 'Formation complète en développement fullstack'
+      desc: 'Formation complète en développement fullstack',
+      certifications: 'https://drive.google.com/file/d/1ekDsJbU3qt6RMyeTvvuTFFJWgoGR7Fpw/view?usp=sharing'
     },
     {
       annee: '2024',
       titre: 'Licence DAS',
       inst: 'Université Virtuelle de Côte d\'Ivoire (UVCI)',
       type: 'formation',
-      desc: 'Développement d\'Applications et Services'
+      desc: 'Développement d\'Applications et Services',
+      certifications: 'https://drive.google.com/file/d/1ekDsJbU3qt6RMyeTvvuTFFJWgoGR7Fpw/view?usp=sharing'
     },
     {
       annee: '2023',
       titre: 'Formation JavaScript',
       inst: 'NAN DIGITAL ACADEMY',
       type: 'certifications',
-      desc: 'Certification en développement JavaScript'
+      desc: 'Certification en développement JavaScript',
+      certifications: 'https://drive.google.com/file/d/1ekDsJbU3qt6RMyeTvvuTFFJWgoGR7Fpw/view?usp=sharing'
     },
     {
       annee: '2021',
       titre: 'Baccalauréat D',
       inst: 'Lycée Municipal de Koumassi',
       type: 'formation',
-      desc: 'Baccalauréat série D'
+      desc: 'Baccalauréat série D',
+      certifications: 'https://drive.google.com/file/d/1ekDsJbU3qt6RMyeTvvuTFFJWgoGR7Fpw/view?usp=sharing'
     }
   ];
 
@@ -421,7 +425,6 @@ export default function Portfolio(){
               <div className="relative flex justify-center group">
                 <div className="relative rounded-full w-64 h-64 p-2 bg-gradient-to-br from-pink-500 to-purple-600 transition-all duration-500 group-hover:scale-105">
                   <img src={logo} className='w-full h-full rounded-full object-cover' alt="" />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-500/50 to-purple-600/50 animate-pulse" />
                 </div>
                 
                 <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-pink-500 rounded-full flex items-center justify-center shadow-2xl shadow-pink-500/50 group-hover:animate-spin">
@@ -548,7 +551,17 @@ export default function Portfolio(){
                             <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
                               {item.desc}
                             </p>
+                            <a 
+                              href={item.certifications}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className='flex bg-gradient-to-b from-pink-500 to-violet-500 px-3 py-1 mt-4 items-center justify-center w-25 rounded-2xl'
+                              >
+                              <Eye className="w-4 h-4 mr-2 group-hover/btn:animate-bounce" />
+                              Voir
+                            </a>
                           </div>
+                          
                         </div>
                         
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
